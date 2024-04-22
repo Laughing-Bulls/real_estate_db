@@ -1,36 +1,37 @@
 const express = require('express');
 const mysql = require('mysql');
 const app = express();
-const PORT = 3000;
+const port = 3000;
 
-app.use(express.static('public'));  // Serves your HTML files from the public directory
-app.use(express.urlencoded({ extended: true })); // Parses URL-encoded bodies
-
-// Route to handle GET request
-app.get('/lookup-visit', (req, res) => {
-    const visitId = req.query.visit_id;
-
-    // Simulate database lookup
-    const visitDateTime = '2024-05-01 09:00:00'; // Example date
-
-    // Send response
-    res.send(`
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Visit Date and Time</title>
-        </head>
-        <body>
-            <h2>Visit Date and Time</h2>
-            <p>Date and Time: ${visitDateTime}</p>
-            <p><a href="input_form.html">Go back</a></p>
-        </body>
-        </html>
-    `);
+// Database connection setup
+const db = mysql.createConnection({
+    host: 'sql1.njit.edu',
+    user: 'asd26',
+    password: '@Yl&K9Akh0', // Use environment variables or config files to secure credentials
+    database: 'asd26'
 });
 
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+db.connect(err => {
+    if (err) throw err;
+    console.log("Connected to the database!");
+});
+
+// Route to handle GET request
+app.get('/getviewing', (req, res) => {
+    const viewingId = req.query.id;
+    if (!viewingId) {
+        return res.status(400).send("Viewing ID is required");
+    }
+    const query = "SELECT * FROM viewings WHERE viewing_id = ?";
+    db.query(query, [viewingId], (err, results) => {
+        if (err) return res.status(500).send(err.message);
+        res.json(results);
+    });
+});
+
+// Serve static files from the 'public' directory
+app.use(express.static('public'));
+
+app.listen(port, () => {
+    console.log(`Server running on http://localhost:${port}`);
 });
