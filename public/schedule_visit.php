@@ -17,7 +17,7 @@ mysql_connect (<MySQLserver>, <username>, <password>);
 mysql_select_db (<dbname>);
 
 $connection = mysqli_connect("localhost", "username", "password", "dbname");
-    $connection = mysqli_connect("webhost01.arcs.njit.edu:45320", "asd26", "@Yl&K9Akh0", "asd26");
+    $connection = mysqli_connect("webhost01.arcs.njit.edu:45320", "asd26", "<password>", "asd26");
 
     
     Server: sql1.njit.edu via TCP/IP
