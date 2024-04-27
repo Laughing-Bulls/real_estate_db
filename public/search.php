@@ -17,7 +17,7 @@ error_reporting(E_ALL);
 
 $host = 'sql1.njit.edu';  // Might need to use the internal network address
 $user = 'asd26';
-$password = '@Yl&K9Akh0';
+$password = '<password>';
 $dbname = 'asd26';
 
 // Create connection
