@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search For Sale Properties</title>
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon">
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<!-- Navbar Start -->
+<div class="container-fluid nav-bar bg-transparent">
+  <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+    <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
+      <div class="icon p-2 me-2">
+        <img class="img-fluid" src="img/icon-deal.png" alt="Icon" style="width: 30px; height: 30px;">
+      </div>
+      <h1 class="m-0 text-primary">NJIT Realty</h1>
+    </a>
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto">
+        <a href="index.html" class="nav-item nav-link active">Home</a>
+        <a href="about.html" class="nav-item nav-link">About</a>
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Properties</a>
+          <div class="dropdown-menu rounded-0 m-0">
+            <a href="for_sale.html" class="dropdown-item">For Sale</a>
+            <a href="for_rent.html" class="dropdown-item">For Rent</a>
+          </div>
+        </div>
+        <a href="password.html" class="nav-item nav-link">Realtor Hub</a>
+        <a href="password2.html" class="nav-item nav-link">Realty Database</a>
+        <!-- <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Realty Database</a>
+            <div class="dropdown-menu rounded-0 m-0">
+                <a href="buyer_search.html" class="dropdown-item">Manage Customers</a>
+                <a href="owner_search.html" class="dropdown-item">Manage Owners</a>
+                <a href="agent_search.html" class="dropdown-item">Manage Agents</a>
+                <a href="property_search.html" class="dropdown-item">Manage Properties</a>
+            </div>
+        </div> -->
+
+      </div>
+      <a href="offer.php" class="btn btn-primary px-3 d-none d-lg-flex">Make an Offer</a>
+    </div>
+  </nav>
+</div>
+<!-- Navbar End -->
+
+
+<div class="container mt-5">
+  <h2>Search Homes for Sale</h2><br>
+  <form action="for_sale.php" method="post">
+
+    <!-- Property details -->
+    <div class="form-group">
+      <label for="city">City:</label>
+      <input type="text" class="form-control" id="city" name="city">
+    </div>
+    <div class="form-group">
+      <label for="state">State:</label>
+      <select class="form-control" id="state" name="state">
+        <option value="">Select State</option>
+        <option value="Alabama">Alabama</option>
+        <option value="Alaska">Alaska</option>
+        <option value="Arizona">Arizona</option>
+        <option value="Arkansas">Arkansas</option>
+        <option value="California">California</option>
+        <option value="Colorado">Colorado</option>
+        <option value="Connecticut">Connecticut</option>
+        <option value="Delaware">Delaware</option>
+        <option value="Florida">Florida</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Hawaii">Hawaii</option>
+        <option value="Idaho">Idaho</option>
+        <option value="Illinois">Illinois</option>
+        <option value="Indiana">Indiana</option>
+        <option value="Iowa">Iowa</option>
+        <option value="Kansas">Kansas</option>
+        <option value="Kentucky">Kentucky</option>
+        <option value="Louisiana">Louisiana</option>
+        <option value="Maine">Maine</option>
+        <option value="Maryland">Maryland</option>
+        <option value="Massachusetts">Massachusetts</option>
+        <option value="Michigan">Michigan</option>
+        <option value="Minnesota">Minnesota</option>
+        <option value="Mississippi">Mississippi</option>
+        <option value="Missouri">Missouri</option>
+        <option value="Montana">Montana</option>
+        <option value="Nebraska">Nebraska</option>
+        <option value="Nevada">Nevada</option>
+        <option value="New Hampshire">New Hampshire</option>
+        <option value="New Jersey">New Jersey</option>
+        <option value="New Mexico">New Mexico</option>
+        <option value="New York">New York</option>
+        <option value="North Carolina">North Carolina</option>
+        <option value="North Dakota">North Dakota</option>
+        <option value="Ohio">Ohio</option>
+        <option value="Oklahoma">Oklahoma</option>
+        <option value="Oregon">Oregon</option>
+        <option value="Pennsylvania">Pennsylvania</option>
+        <option value="Rhode Island">Rhode Island</option>
+        <option value="South Carolina">South Carolina</option>
+        <option value="South Dakota">South Dakota</option>
+        <option value="Tennessee">Tennessee</option>
+        <option value="Texas">Texas</option>
+        <option value="Utah">Utah</option>
+        <option value="Vermont">Vermont</option>
+        <option value="Virginia">Virginia</option>
+        <option value="Washington">Washington</option>
+        <option value="West Virginia">West Virginia</option>
+        <option value="Wisconsin">Wisconsin</option>
+        <option value="Wyoming">Wyoming</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="home_type">Home Type:</label>
+      <select class="form-control" id="home_type" name="home_type">
+        <option value="">Select Home Type</option>
+        <option value="house">House</option>
+        <option value="condo">Condo</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="bedrooms">Number of Bedrooms:</label>
+      <input type="number" class="form-control" id="bedrooms" name="bedrooms" placeholder="Enter number of bedrooms" min="0" max="99"
+             oninvalid="this.setCustomValidity('Please enter a number up to 99')" oninput="this.setCustomValidity('')">
+    </div>
+    <div class="form-group">
+      <label for="bathrooms">Number of Bathrooms:</label>
+      <input type="number" class="form-control" id="bathrooms" name="bathrooms" placeholder="Enter minimum number of bathrooms" min="0" max="99"
+             oninvalid="this.setCustomValidity('Please enter a number up to 99')" oninput="this.setCustomValidity('')">
+    </div>
+    <div class="form-group">
+      <label for="sq_feet">Home Size in Square Feet:</label>
+      <input type="number" class="form-control" id="sq_feet" name="sq_feet" placeholder="Enter minimum square footage" min="0" max="99999"
+             oninvalid="this.setCustomValidity('Please enter a number up to 99,999 square feet')" oninput="this.setCustomValidity('')">
+    </div>
+    <div class="form-group">
+      <label for="lot_size">Lot Size in Acres:</label>
+      <input type="text" class="form-control" id="lot_size" name="lot_size" placeholder="Enter minimum lot size">
+    </div>
+    <div class="form-group">
+      <label for="year_built">Year Built:</label>
+      <input type="number" class="form-control" id="year_built" name="year_built" min="1500" max="2024"
+             oninvalid="this.setCustomValidity('Please enter a valid year')" oninput="this.setCustomValidity('')">
+    </div>
+    <div class="form-group">
+      <label for="architecture">Architectural Style:</label>
+      <select class="form-control" id="architecture" name="architecture">
+        <option value="">Select Architectural Style</option>
+        <option value="A-frame">A-Frame</option>
+        <option value="antebellum">Antebellum</option>
+        <option value="cabin">Cabin</option>
+        <option value="cape cod">Cape Cod</option>
+        <option value="colonial">Colonial</option>
+        <option value="contemporary">Contemporary</option>
+        <option value="cottage">Cottage</option>
+        <option value="country">Country</option>
+        <option value="craftsman">Craftsman</option>
+        <option value="farmhouse">Farmhouse</option>
+        <option value="federal">Federal</option>
+        <option value="french">French</option>
+        <option value="georgian">Georgian</option>
+        <option value="gothic">Gothic</option>
+        <option value="greek">Greek</option>
+        <option value="italian">Italian</option>
+        <option value="mediterranean">Mediterranean</option>
+        <option value="modern">Modern</option>
+        <option value="prarie">Prarie</option>
+        <option value="ranch">Ranch</option>
+        <option value="rowhouse">Rowhouse</option>
+        <option value="saltbox">Saltbox</option>
+        <option value="spanish">Spanish</option>
+        <option value="tudor">Tudor</option>
+        <option value="victorian">Victorian</option>
+        <option value="other">OTHER</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="pool">Swimming Pool:</label>
+      <select class="form-control" id="pool" name="pool">
+        <option value=""></option>
+        <option value="Y">Yes</option>
+        <option value="N">No</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="property_taxes">Annual Property Taxes ($):</label>
+      <input type="text" class="form-control" id="property_taxes" name="property_taxes" placeholder="Enter maximum property taxes">
+    </div>
+    <!-- Submit button -->
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>
+
